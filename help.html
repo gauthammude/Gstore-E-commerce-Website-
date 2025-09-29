@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Help & Support</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9fafb;
+      margin: 0;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      background-color: #040404;
+      color: whitesmoke;
+    }
+
+    .help-container {
+      background: white;
+      max-width: 600px;
+      width: 100%;
+      padding: 30px 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px whitesmoke;
+      background-color: black;
+      color: whitesmoke;
+    }
+
+    h1 {
+      color: #2c3e50;
+      margin-bottom: 20px;
+      text-align: center;
+      color: whitesmoke;
+    }
+
+    p {
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      text-align: center;
+      color: whitesmoke;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      color: whitesmoke;
+    }
+
+    label {
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #fffefe;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+      resize: vertical;
+      color: whitesmoke;
+    }
+
+    textarea {
+      min-height: 100px;
+    }
+
+    input[type="submit"] {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      color: whitesmoke;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    .contact-info {
+      text-align: center;
+      margin-top: 30px;
+      color: #666;
+      font-size: 14px;
+      color: whitesmoke;
+    }
+    .button-to-home{
+        background-color: whitesmoke;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="help-container">
+    <h1>Need Help?</h1>
+    <p>If you have any questions, issues, or need assistance, please fill out the form below or contact us directly.</p>
+
+    <form action="#" method="post">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required />
+
+      <label for="email">Your Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email id" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Describe your issue or question..." required></textarea>
+
+      <input type="submit" value="Send Message" />
+    </form>
+
+    <div class="contact-info">
+      <p>Or email us directly at <a href="mailto:gauthammude@gmail.com">gauthammude@gmail.com</a></p>
+      <p>Phone: +91 8977257563</p>
+    </div>
+    <button id="button-to-home">Go Back</button>
+  </div>
+
+</body>
+<script>
+   document.querySelector('button').addEventListener('click', function() {
+  window.location.href = "{%url 'index'%}";
+});
+
+  </script>
+</html>

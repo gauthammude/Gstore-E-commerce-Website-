@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>G Store</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/today.css">
+  <link rel="stylesheet" href="/static/css/fresh.css">
+  <link rel="stylesheet" href="/static/css/fashion.css">
+  <link rel="stylesheet" href="/static/css/food.css">
+  <link rel="stylesheet" href="/static/css/medicens.css">
+  <link rel="stylesheet" href="/static/css/offers.css">
+  <link rel="stylesheet" href="/static/css/books.css">
+  <div id="top">
+
+    <div class="hamburger-container">
+      <i class="fas fa-bars" id="hamburger-icon"></i>
+      <div class="hamburger-menu" id="hamburger-menu">
+        <a href="{%url 'register'%}">Sign In</a>
+        <a href="{%url 'cart'%}">Your Account</a>
+        <a href="{%url 'cart'%}">Orders</a>
+        <a href="{%url 'help'%}">Help</a>
+      </div>
+    </div>
+    <img id="img" src="/static/css/logo.png" alt="logo" />
+
+    <div class="loc">
+      Location <i class="fas fa-map-marker-alt"></i>
+    </div>
+    <h1><center>G STORE</center></h1>
+    <div class="search">
+      <div class="all">
+        All <i class="fas fa-caret-down"></i>
+      </div>
+      <input id="search" type="search" placeholder="Search..." />
+      <div class="glass"><i class="fas fa-search" style="font-size: 24px;"></i>
+    </div>
+    </div>
+      <div class="Language">
+      <span class="icp-nav-flag icp-nav-flag-in icp-nav-flag-lop" role="img" aria-label="India"></span>
+      <div class="lang">Eng</div>
+      <button class="nav-flyout-button nav-icon nav-arrow" aria-label="Expand to Change Language or Country" tabindex="0" style="visibility: visible;" aria-expanded="false"></button>
+      </div>
+
+      <a href="{%url 'signin'%}" class="login">Login</a>
+      <div class="login">
+      <a href="{%url 'cart'%}" class="cart" style="color: whitesmoke; text-decoration: none;">Return</a>&
+      <a href="{%url 'cart'%}" class="cart" style="color: whitesmoke; text-decoration: none;">Orders</a>
+      </div>
+      <a href="{%url 'cart'%}" class="cart" style="color: whitesmoke; text-decoration: none;">
+  <i class="fas fa-shopping-cart cart-symbol"></i>
+  Cart
+</a>
+  
+  </div>
+</head>
+
+
+<body>
+
+  <div class="bar">
+    <a href="{%url 'index'%}" class="options">Home</a>
+    <a href="{%url 'fresh'%}" class="options">Fresh</a>
+    <a href="{%url 'today'%}" class="options">Today's deal</a>
+    <a href="{%url 'grocery'%}" class="options">Grocery</a>
+    <a href="{%url 'offers'%}" class="options">Offers</a>
+    <a href="{%url 'electronics'%}"class="options">Electronic</a>
+    <a href="{%url 'fashion'%}"class="options">Fashion</a>
+    <a href="{%url 'food'%}"class="options">Food</a>
+    <a href="{%url 'books'%}" class="options">Books</a>
+    <a href="{%url 'medicens'%}" class="options">Medicens</a>
+  </div>

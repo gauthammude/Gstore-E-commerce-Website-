@@ -6,6 +6,10 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.conf import settings
+from django.views.decorators.csrf import csrf_exempt
+from django.http import JsonResponse
+from django.shortcuts import redirect
+
 import stripe
 def register_view(request):
     if request.method == 'POST':
@@ -60,6 +64,11 @@ def medicens(request):
     return render(request,'medicens.html')
 def books(request):
     return render(request,'books.html')
+def cart(request):
+    return render(request,'cart.html')
+
+def help(request):
+    return render(request,'help.html')
 
 
 def signin_view(request):
@@ -83,3 +92,24 @@ def index_view(request):
 
 
 
+def payment_view(request):
+    if request.method == 'POST':
+        product_name = request.POST.get('product_name')
+        price = request.POST.get('price')
+        image = request.POST.get('image')
+
+        context = {
+            'product_name': product_name,
+            'price': price,
+            'image': image
+        }
+        return render(request, 'payment.html', context)
+    return redirect('index')  # Or wherever your homepage is
+
+@csrf_exempt
+def payment_success(request):
+    return render(request, 'payment_success.html')
+
+@csrf_exempt
+def payment_failed(request):
+    return render(request, 'payment_failed.html')

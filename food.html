@@ -1,0 +1,112 @@
+{%include 'header.html'%}
+    <section class="food-section">
+  <h2 class="section-title">Delicious Food Items</h2>
+
+  <div class="food-grid">
+    <div class="food-card">
+      <img src="https://content.jdmagicbox.com/comp/def_content/pizza_outlets/default-pizza-outlets-3.jpg" alt="Pizza">
+      <div class="food-info">
+        <h3>Margherita Pizza</h3>
+        <p>Classic delight with fresh tomatoes and basil.</p>
+        <span class="price">$12.99</span>
+        <button class="add-to-cart order-btn" data-name="Margherita Pizza" data-price="$45" data-image="https://content.jdmagicbox.com/comp/def_content/pizza_outlets/default-pizza-outlets-3.jpg">Add to Cart</button>
+              <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="Margherita Pizza">
+    <input type="hidden" name="price" value="12.99">
+    <input type="hidden" name="image" value="https://content.jdmagicbox.com/comp/def_content/pizza_outlets/default-pizza-outlets-3.jpg">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+      </div>
+    </div>
+
+    <div class="food-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBFCimCM1wFvb3FZQOZH_j5ta4Qd2SlNj2vg&s" alt="Burger">
+      <div class="food-info">
+        <h3>Cheese Burger</h3>
+        <p>Grilled patty with melted cheese and fresh veggies.</p>
+        <span class="price">$9.99</span>
+        <button class="add-to-cart order-btn" data-name="Cheese Burger" data-price="$26" data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBFCimCM1wFvb3FZQOZH_j5ta4Qd2SlNj2vg&s">Add to Cart</button>
+              <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="cheese Burger">
+    <input type="hidden" name="price" value="9.99">
+    <input type="hidden" name="image" value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBFCimCM1wFvb3FZQOZH_j5ta4Qd2SlNj2vg&s">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+      </div>
+    </div>
+
+    <div class="food-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_6OZBE3ytkkHYZ9iRWTmki4F9IKMXGo6D0w&s" alt="Pasta">
+      <div class="food-info">
+        <h3>Italian Pasta</h3>
+        <p>Creamy Alfredo with parmesan and herbs.</p>
+        <span class="price">$11.50</span>
+        <button class="add-to-cart order-btn" data-name="Italian Pasta" data-price="$35" data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_6OZBE3ytkkHYZ9iRWTmki4F9IKMXGo6D0w&s">Add to Cart</button>
+              <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="Italian Pasta">
+    <input type="hidden" name="price" value="11.50">
+    <input type="hidden" name="image" value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_6OZBE3ytkkHYZ9iRWTmki4F9IKMXGo6D0w&s">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="backtotop">
+  <a class="backto-top" href="{%url 'food'%}"  style="text-decoration: none; background-color: white; color: black;">Back To Top</a>
+</div>
+
+
+<div class="footer">
+  <div class="foot1"><h3>Get to Know Us</h3>
+  
+  <a href="" class="foot">About G Store</a>
+  <a href="" class="foot">Careers</a>
+  <a href="" class="foot">Press Releases</a>
+  </div>
+  <div class="foot1"><h3>Connect with Us</h3>
+  <a href="" class="foot">Facebook</a>
+  <a href="" class="foot">Twitter</a>
+  <a href="" class="foot">Instagram</a>
+  </div>
+  <div class="foot1"><h3>
+  Make Money with Us</h3>
+  <a href="" class="foot">Sell on G Stores</a>
+  <a href="" class="foot">Sell under G Accelerator</a>
+  <a href="" class="foot">Supply to G  Stores</a>
+  <a href="" class="foot">Become an Affiliate</a>
+  </div>
+  <div class="foot1"><h3>Let Us Help You</h3>
+  <a href="" class="foot">Your Account</a>
+  <a href="" class="foot">Returns Centre</a>
+  <a href="" class="foot">Recalls and Product Safety Alerts</a>
+  <a href="" class="foot">Help</a>
+  </div>
+</div>
+
+
+<footer class="foo">
+<div class="foo-">
+  GG
+  <span class="icp-nav-flag icp-nav-flag-in icp-nav-flag-lop" role="img" aria-label="India"></span>
+      <div class="lang">Eng</div>
+      <button class="nav-flyout-button nav-icon nav-arrow" aria-label="Expand to Change Language or Country" tabindex="0" style="visibility: visible;" aria-expanded="false"></button>
+      </div>
+</div>
+</footer>
+<div class="column-items">
+  <span>Conditions of Use & Sale</span>
+<span>Privacy Notice</span>
+<span>Interest-Based Ads</span>
+<span>G STORES.com</span>
+</div>
+
+</body>
+<script src="/static/js/food.js"></script>
+<script src="/static/js/a.js"></script>
+</html>

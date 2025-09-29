@@ -1,0 +1,119 @@
+{%include 'header.html'%}
+      <div class="slider">
+  <div class="slides" id="slides">
+    <div class="slide"><img src="https://www.shutterstock.com/image-vector/flash-sale-promotion-banner-25-600nw-2159885029.jpg" alt="Slide 1"></div>
+    <div class="slide"><img src="https://img.freepik.com/premium-psd/super-deal-discount-banner-template-promotion_501916-273.jpg" alt="Slide 2"></div>
+    <div class="slide"><img src="https://www.shutterstock.com/image-vector/special-offer-banner-vector-template-260nw-2474802375.jpg" alt="Slide 3"></div>
+  </div>
+  <button class="prev" onclick="moveSlide(-1)">❮</button>
+  <button class="next" onclick="moveSlide(1)">❯</button>
+  </div>
+  </div>
+<section class="deals-section">
+  <h2 class="section-title">Today's Deals</h2>
+  <div class="deal-grid">
+    <div class="deal-item">
+      <span class="deal-badge">-30%</span>
+      <img src="https://www.walkaroo.in/cdn/shop/files/3_e6e303ab-9323-405f-adc3-adde5d91761b.jpg?v=1753517376" alt="Orange Juice">
+      <h3 style="color: black;">Shoes</h3>
+      <p class="old-price">$4.99</p>
+      <p class="new-price">$3.49</p>
+      <button class="add-to-cart" data-name="Dress" data-price="$3.49" data-image="https://www.walkaroo.in/cdn/shop/files/3_e6e303ab-9323-405f-adc3-adde5d91761b.jpg?v=1753517376">Add to Cart</button>
+            <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="Shoes">
+    <input type="hidden" name="price" value="3.99">
+    <input type="hidden" name="image" value="https://www.walkaroo.in/cdn/shop/files/3_e6e303ab-9323-405f-adc3-adde5d91761b.jpg?v=1753517376">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+    </div>
+
+    <div class="deal-item">
+      <span class="deal-badge">-20%</span>
+      <img src="https://5.imimg.com/data5/SELLER/Default/2022/7/LM/XX/KI/96984865/plain-black-shirts-500x500-500x500.jpg" alt="Brown Bread">
+      <h3>Black Shirt</h3>
+      <p class="old-price">$2.49</p>
+      <p class="new-price">$1.99</p>
+      <button class="add-to-cart" data-name="Dress" data-price="$1.99" data-image="https://5.imimg.com/data5/SELLER/Default/2022/7/LM/XX/KI/96984865/plain-black-shirts-500x500-500x500.jpg">Add to Cart</button>
+            <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="Black Shirt">
+    <input type="hidden" name="price" value="1.99">
+    <input type="hidden" name="image" value="https://5.imimg.com/data5/SELLER/Default/2022/7/LM/XX/KI/96984865/plain-black-shirts-500x500-500x500.jpg">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+    </div>
+
+    <div class="deal-item">
+      <span class="deal-badge">-15%</span>
+      <img src="https://assets.myntassets.com/dpr_1.5,q_30,w_400,c_limit,fl_progressive/assets/images/28906912/2024/4/13/54437031-ab5a-41a8-ae9c-800fd1deeb481713012837064WROGNMenDialStrapsAnalogueWatchHOBWRG04661.jpg" alt="Organic Milk">
+      <h3>Watches</h3>
+      <p class="old-price">$3.99</p>
+      <p class="new-price">$3.39</p>
+      <button class="add-to-cart" data-name="Dress" data-price="$3.39" data-image="https://assets.myntassets.com/dpr_1.5,q_30,w_400,c_limit,fl_progressive/assets/images/28906912/2024/4/13/54437031-ab5a-41a8-ae9c-800fd1deeb481713012837064WROGNMenDialStrapsAnalogueWatchHOBWRG04661.jpg">Add to Cart</button>
+            <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="Watches">
+    <input type="hidden" name="price" value="3.39">
+    <input type="hidden" name="image" value="https://assets.myntassets.com/dpr_1.5,q_30,w_400,c_limit,fl_progressive/assets/images/28906912/2024/4/13/54437031-ab5a-41a8-ae9c-800fd1deeb481713012837064WROGNMenDialStrapsAnalogueWatchHOBWRG04661.jpg">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+  <div class="backtotop">
+  <a class="backto-top" href="{%url 'today'%}"  style="text-decoration: none; background-color: white; color: black;">Back To Top</a>
+</div>
+<div class="footer">
+  <div class="foot1"><h3>Get to Know Us</h3>
+  
+  <a href="" class="foot">About G Store</a>
+  <a href="" class="foot">Careers</a>
+  <a href="" class="foot">Press Releases</a>
+  </div>
+  <div class="foot1"><h3>Connect with Us</h3>
+  <a href="" class="foot">Facebook</a>
+  <a href="" class="foot">Twitter</a>
+  <a href="" class="foot">Instagram</a>
+  </div>
+  <div class="foot1"><h3>
+  Make Money with Us</h3>
+  <a href="" class="foot">Sell on G Stores</a>
+  <a href="" class="foot">Sell under G Accelerator</a>
+  <a href="" class="foot">Supply to G  Stores</a>
+  <a href="" class="foot">Become an Affiliate</a>
+  </div>
+  <div class="foot1"><h3>Let Us Help You</h3>
+  <a href="" class="foot">Your Account</a>
+  <a href="" class="foot">Returns Centre</a>
+  <a href="" class="foot">Recalls and Product Safety Alerts</a>
+  <a href="" class="foot">Help</a>
+  </div>
+</div>
+
+
+<footer class="foo">
+<div class="foo-">
+  GG
+  <span class="icp-nav-flag icp-nav-flag-in icp-nav-flag-lop" role="img" aria-label="India"></span>
+      <div class="lang">Eng</div>
+      <button class="nav-flyout-button nav-icon nav-arrow" aria-label="Expand to Change Language or Country" tabindex="0" style="visibility: visible;" aria-expanded="false"></button>
+      </div>
+</div>
+</footer>
+<div class="column-items">
+  <span>Conditions of Use & Sale</span>
+<span>Privacy Notice</span>
+<span>Interest-Based Ads</span>
+<span>G STORES.com</span>
+</div>
+
+</body>
+<script src="/static/js/today.js"></script>
+<script src="/static/js/a.js"></script>
+</html>

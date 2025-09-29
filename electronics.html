@@ -1,0 +1,186 @@
+{%include 'header.html'%}
+  <!-- Slider Section -->
+  <div class="slider">
+    <div class="slides" id="slides">
+      <div class="slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZW2iQNBFnQvAJZ7bTlKRPsRpOOIVmiVoDXg&s" alt="Electronics Showcase 1" style="object-fit:fill;"></div>
+      <div class="slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdS50mdjiJ3hbmkqnZl4E6fN2ZCyJOisZDEQ&s" alt="Electronics Showcase 2" ></div>
+      <div class="slide"><img src="https://img.freepik.com/premium-photo/flat-lay-black-tech-gadgets-headphones-phone-laptop-black-background_14117-747545.jpg" alt="Electronics Showcase 3" ></div>
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">❮</button>
+    <button class="next" onclick="moveSlide(1)">❯</button>
+  </div>
+
+  <!-- Electronics Items Section -->
+  <section class="grocery-section">
+    <h2 class="section-title">Latest Electronics Deals</h2>
+    <div class="grocery-grid">
+
+      <div class="grocery-item">
+        <img src="https://images.unsplash.com/photo-1580910051070-c3c1aa234e82" alt="Smartphone" />
+        <h3>Samsung Galaxy S21</h3>
+        <p>$499.99</p>
+        <button class="add-to-cart" data-name="Samsung Galaxy S21" data-price="$499.9" data-image="https://images.unsplash.com/photo-1580910051070-c3c1aa234e82">Add to Cart</button>
+          <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="Samsung">
+    <input type="hidden" name="price" value="499.99">
+    <input type="hidden" name="image" value="https://images.unsplash.com/photo-1580910051070-c3c1aa234e82">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+      </div>
+
+      <div class="grocery-item">
+        <img src="https://images.unsplash.com/photo-1587202372775-98973b43c3b0" alt="Wireless Headphones" />
+        <h3>Sony WH-1000XM5</h3>
+        <p>$349.99</p>
+        <button class="add-to-cart" data-name="Sony WH-1000XM5" data-price="$349.99" data-image="https://images.unsplash.com/photo-1587202372775-98973b43c3b0">Add to Cart</button>
+          <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="Sony">
+    <input type="hidden" name="price" value="349.99">
+    <input type="hidden" name="image" value="https://images.unsplash.com/photo-1587202372775-98973b43c3b0">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+      </div>
+
+      <div class="grocery-item">
+        <img src="https://images.unsplash.com/photo-1616161611432-07e4a1d2c2b7" alt="Gaming Laptop" />
+        <h3>Alienware X15 Gaming Laptop</h3>
+        <p>$1799.00</p>
+        <button class="add-to-cart" data-name="Alienware X15 Gaming Laptop" data-price="$1799.00" data-image="https://images.unsplash.com/photo-1616161611432-07e4a1d2c2b7">Add to Cart</button>
+          <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="X15">
+    <input type="hidden" name="price" value="1799.00">
+    <input type="hidden" name="image" value="https://images.unsplash.com/photo-1616161611432-07e4a1d2c2b7">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+      </div>
+
+      <div class="grocery-item">
+        <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7" alt="Smartwatch" />
+        <h3>Apple Watch Series 9</h3>
+        <p>$399.99</p>
+        <button class="add-to-cart" data-name="Apple Watch" data-price="$399.99" data-image="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7">Add to Cart</button>
+          <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="Apple">
+    <input type="hidden" name="price" value="399.99">
+    <input type="hidden" name="image" value="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+      </div>
+    </div>
+
+    <div class="grocery-grid">
+      <div class="grocery-item">
+        <img src="https://images.unsplash.com/photo-1593642634367-d91a135587b5" alt="Laptop" />
+        <h3>MacBook Air M2</h3>
+        <p>$1099.00</p>
+        <button class="add-to-cart" data-name="MacBook Air M2" data-price="$1099.00" data-image="https://images.unsplash.com/photo-1593642634367-d91a135587b5">Add to Cart</button>
+          <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="MacBook">
+    <input type="hidden" name="price" value="1099.00">
+    <input type="hidden" name="image" value="https://images.unsplash.com/photo-1593642634367-d91a135587b5">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+      </div>
+
+      <div class="grocery-item">
+        <img src="https://images.unsplash.com/photo-1587829741301-dc798b83add3" alt="Tablet" />
+        <h3>iPad Pro 12.9</h3>
+        <p>$999.99</p>
+        <button class="add-to-cart" data-name="iPad Pro 12.9" data-price="$999.99" data-image="https://images.unsplash.com/photo-1587829741301-dc798b83add3">Add to Cart</button>
+          <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="ipad">
+    <input type="hidden" name="price" value="999.99">
+    <input type="hidden" name="image" value="https://images.unsplash.com/photo-1587829741301-dc798b83add3">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+      </div>
+
+      <div class="grocery-item">
+        <img src="https://images.unsplash.com/photo-1585394908361-5ef7c93d28e6" alt="Bluetooth Speaker" />
+        <h3>JBL Flip 6 Speaker</h3>
+        <p>$129.00</p>
+        <button class="add-to-cart" data-name="JBL Flip 6 Speaker" data-price="$129.00" data-image="https://images.unsplash.com/photo-1585394908361-5ef7c93d28e6">Add to Cart</button>
+          <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="JBL">
+    <input type="hidden" name="price" value="129.00">
+    <input type="hidden" name="image" value="https://images.unsplash.com/photo-1585394908361-5ef7c93d28e6">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+      </div>
+
+      <div class="grocery-item">
+        <img src="https://images.unsplash.com/photo-1571607387223-023a7e7b03ed" alt="Smart TV" />
+        <h3>Samsung 55" 4K Smart TV</h3>
+        <p>$649.00</p>
+        <button class="add-to-cart" data-name="Dress" data-price="$649.00" data-image="https://images.unsplash.com/photo-1571607387223-023a7e7b03ed">Add to Cart</button>
+          <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="Samsung">
+    <input type="hidden" name="price" value="649.00">
+    <input type="hidden" name="image" value="https://images.unsplash.com/photo-1571607387223-023a7e7b03ed">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+      </div>
+    </div>
+  </section>
+
+  <div class="backtotop">
+  <a class="backto-top" href="{%url 'electronics'%}"  style="text-decoration: none; background-color: white; color: black;">Back To Top</a>
+</div>
+
+
+<div class="footer">
+  <div class="foot1"><h3>Get to Know Us</h3>
+  
+  <a href="" class="foot">About G Store</a>
+  <a href="" class="foot">Careers</a>
+  <a href="" class="foot">Press Releases</a>
+  </div>
+  <div class="foot1"><h3>Connect with Us</h3>
+  <a href="" class="foot">Facebook</a>
+  <a href="" class="foot">Twitter</a>
+  <a href="" class="foot">Instagram</a>
+  </div>
+  <div class="foot1"><h3>
+  Make Money with Us</h3>
+  <a href="" class="foot">Sell on G Stores</a>
+  <a href="" class="foot">Sell under G Accelerator</a>
+  <a href="" class="foot">Supply to G  Stores</a>
+  <a href="" class="foot">Become an Affiliate</a>
+  </div>
+  <div class="foot1"><h3>Let Us Help You</h3>
+  <a href="" class="foot">Your Account</a>
+  <a href="" class="foot">Returns Centre</a>
+  <a href="" class="foot">Recalls and Product Safety Alerts</a>
+  <a href="" class="foot">Help</a>
+  </div>
+</div>
+
+
+<footer class="foo">
+<div class="foo-">
+  GG
+  <span class="icp-nav-flag icp-nav-flag-in icp-nav-flag-lop" role="img" aria-label="India"></span>
+      <div class="lang">Eng</div>
+      <button class="nav-flyout-button nav-icon nav-arrow" aria-label="Expand to Change Language or Country" tabindex="0" style="visibility: visible;" aria-expanded="false"></button>
+      </div>
+</div>
+</footer>
+<div class="column-items">
+  <span>Conditions of Use & Sale</span>
+<span>Privacy Notice</span>
+<span>Interest-Based Ads</span>
+<span>G STORES.com</span>
+</div>
+
+</body>
+<script src="/static/js/electronics.js"></script>
+<script src="/static/js/a.js"></script>
+</html>

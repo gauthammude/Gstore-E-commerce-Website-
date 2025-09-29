@@ -1,0 +1,108 @@
+{%include 'header.html'%}
+<section class="offers-section">
+  <h2 class="section-title" style="color: black;"> Exclusive Offers</h2>
+  <div class="offers-grid">
+    <div class="offer-card">
+      <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/buy-1-get-1-free-pizza-offer-banner-design-template-313025905c804cc614d504d85249575c_screen.jpg?ts=1732621261" alt="Combo Offer">
+      <div class="offer-content">
+        <h3>Buy 1 Get 1 Free</h3>
+        <p>On selected snacks and beverages. Limited time only!</p>
+        <button class="add-to-cart" data-name="snacks" data-price="$100" data-image="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/buy-1-get-1-free-pizza-offer-banner-design-template-313025905c804cc614d504d85249575c_screen.jpg?ts=1732621261">Add to Cart</button>
+              <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="On selected snacks and beverages. Limited time only!">
+    <input type="hidden" name="price" value="100">
+    <input type="hidden" name="image" value="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/buy-1-get-1-free-pizza-offer-banner-design-template-313025905c804cc614d504d85249575c_screen.jpg?ts=1732621261">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+      </div>
+    </div>
+
+    <div class="offer-card">
+      <img src="https://giftflys.com/wp-content/uploads/2023/03/Grocery-pack.jpg" alt="Weekly Discount">
+      <div class="offer-content">
+        <h3>Flat 40% Off</h3>
+        <p>On weekly essentials like rice, oil, and flour packs.</p>
+        <button class="add-to-cart" data-name="pack" data-price="$89.6" data-image="https://giftflys.com/wp-content/uploads/2023/03/Grocery-pack.jpg">Add to Cart</button>
+              <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="On weekly essentials like rice, oil, and flour packs.">
+    <input type="hidden" name="price" value="89.6">
+    <input type="hidden" name="image" value="https://giftflys.com/wp-content/uploads/2023/03/Grocery-pack.jpg">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+      </div>
+    </div>
+    <div class="offer-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiFg8xAxADTOXto6UntGguvQ8VOI9eNlDg9w&s" alt="Seasonal Sale">
+      <div class="offer-content">
+        <h3>Summer Sale</h3>
+        <p>Cool down with ice creams, cold drinks & fruits - up to 50% off!</p>
+        <button class="add-to-cart" data-name="D" data-price="$70" data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiFg8xAxADTOXto6UntGguvQ8VOI9eNlDg9w&s">Add to Cart</button>
+              <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="Cool down with ice creams, cold drinks & fruits - up to 50% off!">
+    <input type="hidden" name="price" value="70">
+    <input type="hidden" name="image" value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiFg8xAxADTOXto6UntGguvQ8VOI9eNlDg9w&s">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<div class="backtotop">
+  <a class="backto-top" href="{%url 'offers'%}"  style="text-decoration: none; background-color: white; color: black;">Back To Top</a>
+</div>
+
+
+<div class="footer">
+  <div class="foot1"><h3>Get to Know Us</h3>
+  
+  <a href="" class="foot">About G Store</a>
+  <a href="" class="foot">Careers</a>
+  <a href="" class="foot">Press Releases</a>
+  </div>
+  <div class="foot1"><h3>Connect with Us</h3>
+  <a href="" class="foot">Facebook</a>
+  <a href="" class="foot">Twitter</a>
+  <a href="" class="foot">Instagram</a>
+  </div>
+  <div class="foot1"><h3>
+  Make Money with Us</h3>
+  <a href="" class="foot">Sell on G Stores</a>
+  <a href="" class="foot">Sell under G Accelerator</a>
+  <a href="" class="foot">Supply to G  Stores</a>
+  <a href="" class="foot">Become an Affiliate</a>
+  </div>
+  <div class="foot1"><h3>Let Us Help You</h3>
+  <a href="" class="foot">Your Account</a>
+  <a href="" class="foot">Returns Centre</a>
+  <a href="" class="foot">Recalls and Product Safety Alerts</a>
+  <a href="" class="foot">Help</a>
+  </div>
+</div>
+
+
+<footer class="foo">
+<div class="foo-">
+  GG
+  <span class="icp-nav-flag icp-nav-flag-in icp-nav-flag-lop" role="img" aria-label="India"></span>
+      <div class="lang">Eng</div>
+      <button class="nav-flyout-button nav-icon nav-arrow" aria-label="Expand to Change Language or Country" tabindex="0" style="visibility: visible;" aria-expanded="false"></button>
+      </div>
+</div>
+</footer>
+<div class="column-items">
+  <span>Conditions of Use & Sale</span>
+<span>Privacy Notice</span>
+<span>Interest-Based Ads</span>
+<span>G STORES.com</span>
+</div>
+</body>
+
+<script src="/static/js/offers.js"></script>
+<script src="/static/js/a.js"></script>
+</html>

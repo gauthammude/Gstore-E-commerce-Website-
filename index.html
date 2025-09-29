@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>G Store</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/fresh.css">
+  <div id="top">
+
+    <div class="hamburger-container">
+      <i class="fas fa-bars" id="hamburger-icon"></i>
+      <div class="hamburger-menu" id="hamburger-menu">
+        <a href="{%url 'register'%}">Sign In</a>
+        <a href="{%url 'cart'%}">Your Account</a>
+        <a href="{%url 'cart'%}">Orders</a>
+        <a href="{%url 'help'%}">Help</a>
+      </div>
+    </div>
+    <img id="img" src="/static/css/logo.png" alt="logo" />
+
+    <div class="loc">
+      Location <i class="fas fa-map-marker-alt"></i>
+    </div>
+    <h1><center>G STORE</center></h1>
+    <div class="search">
+      <div class="all">
+        All <i class="fas fa-caret-down"></i>
+      </div>
+      <input id="search" type="search" placeholder="Search..." />
+      <div class="glass"><i class="fas fa-search" style="font-size: 24px;"></i>
+    </div>
+    </div>
+      <div class="Language">
+      <span class="icp-nav-flag icp-nav-flag-in icp-nav-flag-lop" role="img" aria-label="India"></span>
+      <div class="lang">Eng</div>
+      <button class="nav-flyout-button nav-icon nav-arrow" aria-label="Expand to Change Language or Country" tabindex="0" style="visibility: visible;" aria-expanded="false"></button>
+      </div>
+
+      <a href="{%url 'signin'%}" class="login">Login</a>
+      <div class="login">
+      <a href="{%url 'cart'%}" class="cart" style="color: whitesmoke; text-decoration: none;">Return</a>&
+      <a href="{%url 'cart'%}" class="cart" style="color: whitesmoke; text-decoration: none;">Orders</a>
+      </div>
+      <a href="{%url 'cart'%}" class="cart" style="color: whitesmoke; text-decoration: none;">
+  <i class="fas fa-shopping-cart cart-symbol"></i>
+  Cart
+</a>
+  
+  </div>
+</head>
+
+
+<body>
+
+  <div class="bar">
+    <a href="{%url 'index'%}" class="options">Home</a>
+    <a href="{%url 'fresh'%}" class="options">Fresh</a>
+    <a href="{%url 'today'%}" class="options">Today's deal</a>
+    <a href="{%url 'grocery'%}" class="options">Grocery</a>
+    <a href="{%url 'offers'%}" class="options">Offers</a>
+    <a href="{%url 'electronics'%}"class="options">Electronic</a>
+    <a href="{%url 'fashion'%}"class="options">Fashion</a>
+    <a href="{%url 'food'%}"class="options">Food</a>
+    <a href="{%url 'books'%}" class="options">Books</a>
+    <a href="{%url 'medicens'%}" class="options">Medicens</a>
+  </div>
+  <div class="slider">
+  <div class="slides" id="slides">
+    <div class="slide"><img src="/static/css/img1.jpg" alt="Slide 1"></div>
+    <div class="slide"><img src="/static/css/img2.webp" alt="Slide 2"></div>
+    <div class="slide"><img src="/static/css/img3.jpg" alt="Slide 3"></div>
+  </div>
+  <button class="prev" onclick="moveSlide(-1)">❮</button>
+  <button class="next" onclick="moveSlide(1)">❯</button>
+  </div>
+  </div>
+<!-- 1 -->
+<div class="con">
+  <!-- 1st container -->
+  <div class="shop_container">
+  <div class="shop">
+  <div class="shop_text">50% off on any dress</div>
+  <img src="/static/css/i1.webp" alt="Dress Image">
+  <p class="price">$20</p>
+  <!-- Inside your existing shop items -->
+   <button class="add-to-cart" data-name="Dress" data-price="$20" data-image="i1.webp">Add to Cart</button>
+   <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="Dress">
+    <input type="hidden" name="price" value="20">
+    <input type="hidden" name="image" value="i1.webp">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+
+
+</form>
+
+
+
+</div>
+    <div class="shop">
+      <div class="shop_text">30% off on Kids' Wear</div>
+      <img src="/static/css/i2.jpeg" alt="Kids' Wear - 30% off">
+      <p>$15.79</p>
+      <button class="add-to-cart" data-name="Dress" data-price="$15" data-image="i2.jpeg">Add to Cart</button>
+      <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="Dress">
+    <input type="hidden" name="price" value="15">
+    <input type="hidden" name="image" value="i2.jpeg">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+    </div>
+    <div class="shop">
+      <div class="shop_text">New Arrival: 10% Off on every product</div>
+      <img src="/static/css/i3.jpeg" alt="New arrivals 10% off">
+      <p>$29</p>
+      <button class="add-to-cart" data-name="Dress" data-price="$29" data-image="i3.jpeg">Add to Cart</button>
+      <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="Dress">
+    <input type="hidden" name="price" value="29">
+    <input type="hidden" name="image" value="i3.jpeg">
+    <button type="submit" class="buynow">Buy Now</button>
+    </div>
+  </div>
+
+  <!-- 2nd container -->
+  <div class="shop_container">
+    <div class="shop">
+      <div class="shop_text">70% off on any dress (Special Offer)</div>
+      <img src="/static/css/i4.jpg" alt="Special Offer Dress - 70% off">
+      <p>$32</p>
+      <button class="add-to-cart" data-name="Dress" data-price="$32" data-image="i4.jpg">Add to Cart</button>
+      <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="Dress">
+    <input type="hidden" name="price" value="32">
+    <input type="hidden" name="image" value="i4.jpg">
+    <button type="submit" class="buynow">Buy Now</button>
+    </div>
+    <div class="shop">
+      <div class="shop_text">Kids' Collection</div>
+      <img src="/static/css/i5.webp" alt="Kids' Collection">
+      <p>$22</p>
+      <button class="add-to-cart" data-name="Dress" data-price="$22" data-image="i5.webp">Add to Cart</button>
+      <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="Dress">
+    <input type="hidden" name="price" value="22">
+    <input type="hidden" name="image" value="i5.webp">
+    <button type="submit" class="buynow">Buy Now</button>
+    </div>
+    <div class="shop">
+      <div class="shop_text">New Arrival: 15% Off on every product</div>
+      <img src="/static/css/i6.jpg" alt="New arrivals 15% off">
+      <p>$32</p>
+      <button class="add-to-cart" data-name="Dress" data-price="$32" data-image="i6.jpg">Add to Cart</button>
+      <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="Dress">
+    <input type="hidden" name="price" value="32">
+    <input type="hidden" name="image" value="i6.jpg">
+    <button type="submit" class="buynow">Buy Now</button>
+    </div>
+  </div>
+
+  <!-- 3rd container -->
+  <div class="shop_container">
+    <div class="shop">
+      <div class="shop_text">50% off on Electronic Gadgets</div>
+      <img src="/static/css/elec1.webp" alt="Electronic Gadgets - 50% off" style="width: 400px;"; >
+      <p>$100</p>
+      <button class="add-to-cart" data-name="Dress" data-price="$100" data-image="elec1.webp">Add to Cart</button>
+      <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="Dress">
+    <input type="hidden" name="price" value="100">
+    <input type="hidden" name="image" value="elec1.webp">
+    <button type="submit" class="buynow">Buy Now</button>
+    </div>
+    <div class="shop">
+      <div class="shop_text">Top Sales: 10% Discount on every electronic product (Offer closes soon)</div>
+      <img src="/static/css/i7.jpeg" alt="Top Sales Electronics - 10% off">
+      <p>$76.4</p>
+      <button class="add-to-cart" data-name="Dress" data-price="$76.4" data-image="i7.jpeg">Add to Cart</button>
+      <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="Dress">
+    <input type="hidden" name="price" value="76.4">
+    <input type="hidden" name="image" value="i7.jpeg">
+    <button type="submit" class="buynow">Buy Now</button>
+    </div>
+    <div class="shop">
+      <div class="shop_text">New Arrival: 10% Off on every electronic product</div>
+      <img src="/static/css/elec3.jpg" alt="New electronic arrivals 10% off">
+      <p>$80.9</p>
+      <button class="add-to-cart" data-name="Dress" data-price="$80.9" data-image="elec3.jpg">Add to Cart</button>
+      <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="Dress">
+    <input type="hidden" name="price" value="80.9">
+    <input type="hidden" name="image" value="elec3.jpg">
+    <button type="submit" class="buynow">Buy Now</button>
+    </div>
+  </div>
+</div>
+<div class="backtotop">
+  <a class="backto-top" href="{%url 'index'%}"  style="text-decoration: none; background-color: white; color: black;">Back To Top</a>
+</div>
+
+<div class="footer">
+  <div class="foot1"><h3>Get to Know Us</h3>
+  
+  <a href="" class="foot">About G Store</a>
+  <a href="" class="foot">Careers</a>
+  <a href="" class="foot">Press Releases</a>
+  </div>
+  <div class="foot1"><h3>Connect with Us</h3>
+  <a href="" class="foot">Facebook</a>
+  <a href="" class="foot">Twitter</a>
+  <a href="" class="foot">Instagram</a>
+  </div>
+  <div class="foot1"><h3>
+  Make Money with Us</h3>
+  <a href="" class="foot">Sell on G Stores</a>
+  <a href="" class="foot">Sell under G Accelerator</a>
+  <a href="" class="foot">Supply to G  Stores</a>
+  <a href="" class="foot">Become an Affiliate</a>
+  </div>
+  <div class="foot1"><h3>Let Us Help You</h3>
+  <a href="" class="foot">Your Account</a>
+  <a href="" class="foot">Returns Centre</a>
+  <a href="" class="foot">Recalls and Product Safety Alerts</a>
+  <a href="" class="foot">Help</a>
+  </div>
+</div>
+
+
+<footer class="foo">
+<div class="foo-">
+  GG
+  <span class="icp-nav-flag icp-nav-flag-in icp-nav-flag-lop" role="img" aria-label="India"></span>
+      <div class="lang">Eng</div>
+      <button class="nav-flyout-button nav-icon nav-arrow" aria-label="Expand to Change Language or Country" tabindex="0" style="visibility: visible;" aria-expanded="false"></button>
+      </div>
+</div>
+</footer>
+<div class="column">
+  <a class="column-items">Conditions of Use & Sale</a>
+  <a class="column-items">Privacy Notice</a>
+  <a class="column-items">Interest-Based Ads</a>
+  <a class="column-items">G STORES.com</a>
+</div>
+
+
+</body>
+<script src="/static/js/a.js">
+</script>
+</html>

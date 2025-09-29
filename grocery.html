@@ -1,0 +1,186 @@
+{%include 'header.html'%}
+      <div class="slider">
+  <div class="slides" id="slides">
+    <div class="slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0hjIcxnhJ6EfRCL5UvA1HShUxUkQ7oybxAw&s" alt="Slide 1"></div>
+    <div class="slide"><img src="https://www.shutterstock.com/image-photo/food-donations-such-pasta-rice-260nw-1986378641.jpg" alt="Slide 2"></div>
+    <div class="slide"><img src="https://www.greenqueen.com.hk/wp-content/uploads/2021/07/food-products-unsplash.jpg" alt="Slide 3"></div>
+  </div>
+  <button class="prev" onclick="moveSlide(-1)">❮</button>
+  <button class="next" onclick="moveSlide(1)">❯</button>
+  </div>
+  </div>
+  <!-- Grocery Items Section -->
+<section class="grocery-section">
+  <h2 class="section-title">Fresh Grocery Items</h2>
+  <div class="grocery-grid">
+    <!-- Item Card -->
+    <div class="grocery-item">
+      <img src="https://www.mirchitales.com/wp-content/uploads/2020/05/Desi-Pakistani-Kitchen-83-1024x683.jpg" >
+      <h3>8 types of millets at low prices</h3>
+      <p>$8.99 / kg</p>
+      <button class="add-to-cart" data-name="8 mixed type" data-price="$8.99" data-image="https://www.mirchitales.com/wp-content/uploads/2020/05/Desi-Pakistani-Kitchen-83-1024x683.jpg">Add to Cart</button>
+            <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="8 types of milletes at low prices">
+    <input type="hidden" name="price" value="8.99">
+    <input type="hidden" name="image" value="https://www.mirchitales.com/wp-content/uploads/2020/05/Desi-Pakistani-Kitchen-83-1024x683.jpg">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+    </div>
+
+    <div class="grocery-item">
+      <img src="https://www.jiomart.com/images/product/original/590003531/ginger-indian-200-g-product-images-o590003531-p590003531-1-202408070949.jpg?im=Resize=(420,420)">
+      <h3>Ginger</h3>
+      <p>$0.3 / 100g</p>
+      <button class="add-to-cart" data-name="Ginger" data-price="$0.3" data-image="https://www.jiomart.com/images/product/original/590003531/ginger-indian-200-g-product-images-o590003531-p590003531-1-202408070949.jpg?im=Resize=(420,420)">Add to Cart</button>
+            <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="Ginger">
+    <input type="hidden" name="price" value="0.3">
+    <input type="hidden" name="image" value="https://www.jiomart.com/images/product/original/590003531/ginger-indian-200-g-product-images-o590003531-p590003531-1-202408070949.jpg?im=Resize=(420,420)">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+    </div>
+
+    <div class="grocery-item">
+      <img src="https://farmindiaorganic.com/cdn/shop/files/GettyImages-128237099-592d92dc5f9b585950c29eaa_1500x.jpg?v=1642078788" alt="Tomatoes">
+      <h3>Mixed 10 types of milletes</h3>
+      <p>$11.8 / kg</p>
+      <button class="add-to-cart" data-name="Mixed" data-price="$11.8" data-image="https://farmindiaorganic.com/cdn/shop/files/GettyImages-128237099-592d92dc5f9b585950c29eaa_1500x.jpg?v=1642078788">Add to Cart</button>
+            <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="Mixed 10 types of milletes">
+    <input type="hidden" name="price" value="11.8">
+    <input type="hidden" name="image" value="https://farmindiaorganic.com/cdn/shop/files/GettyImages-128237099-592d92dc5f9b585950c29eaa_1500x.jpg?v=1642078788">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+    </div>
+
+    <div class="grocery-item">
+      <img src="https://plus.unsplash.com/premium_photo-1702403157830-9df749dc6c1e?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+      <h3>Broccoli</h3>
+      <p>$1.99 each</p>
+      <button class="add-to-cart" data-name="Broccoli" data-price="$1.99" data-image="https://plus.unsplash.com/premium_photo-1702403157830-9df749dc6c1e?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">Add to Cart</button>
+            <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="Broccoli">
+    <input type="hidden" name="price" value="1.99">
+    <input type="hidden" name="image" value="https://plus.unsplash.com/premium_photo-1702403157830-9df749dc6c1e?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+    </div>
+
+    <!-- Add more items as needed -->
+  </div>
+  <div class="grocery-grid">
+    <!-- Item Card -->
+    <div class="grocery-item">
+      <img src="https://www.shutterstock.com/image-photo/pico-robertson-ca-usa-jan-260nw-1925309492.jpg" >
+      <h3>Oranges</h3>
+      <p>$2 / kg</p>
+      <button class="add-to-cart" data-name="Oranges" data-price="$2" data-image="https://www.shutterstock.com/image-photo/pico-robertson-ca-usa-jan-260nw-1925309492.jpg">Add to Cart</button>
+            <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="Orange">
+    <input type="hidden" name="price" value="2">
+    <input type="hidden" name="image" value="https://www.shutterstock.com/image-photo/pico-robertson-ca-usa-jan-260nw-1925309492.jpg">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+    </div>
+
+    <div class="grocery-item">
+      <img src="https://as1.ftcdn.net/jpg/03/05/29/34/1000_F_305293439_5HUB3YafhQam83MWDsLuajZvCwkceBia.jpg" >
+      <h3>PineApple</h3>
+      <p>$3 / kg</p>
+      <button class="add-to-cart" data-name="PineApple" data-price="$3" data-image="https://as1.ftcdn.net/jpg/03/05/29/34/1000_F_305293439_5HUB3YafhQam83MWDsLuajZvCwkceBia.jpg">Add to Cart</button>
+            <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="PineApple">
+    <input type="hidden" name="price" value="3">
+    <input type="hidden" name="image" value="https://as1.ftcdn.net/jpg/03/05/29/34/1000_F_305293439_5HUB3YafhQam83MWDsLuajZvCwkceBia.jpg">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+    </div>
+
+    <div class="grocery-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0RR_HgUGHPf31NrSjmXvsdsVVfKaRzlaqig&s">
+      <h3>Strawberry</h3>
+      <p>$2.20 / kg</p>
+      <button class="add-to-cart" data-name="Strawberry" data-price="$2.20" data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0RR_HgUGHPf31NrSjmXvsdsVVfKaRzlaqig&s">Add to Cart</button>
+            <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="Strawberry">
+    <input type="hidden" name="price" value="2.20">
+    <input type="hidden" name="image" value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0RR_HgUGHPf31NrSjmXvsdsVVfKaRzlaqig&s">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+    </div>
+
+    <div class="grocery-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIZsfkc2zDCA423IfWyeg_FaRvFs_LyLeMUw&s">
+      <h3>Mango</h3>
+      <p>$1.99 each</p>
+      <button class="add-to-cart" data-name="Mango" data-price="$1.99" data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIZsfkc2zDCA423IfWyeg_FaRvFs_LyLeMUw&s">Add to Cart</button>
+            <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="Mango">
+    <input type="hidden" name="price" value="1.99">
+    <input type="hidden" name="image" value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIZsfkc2zDCA423IfWyeg_FaRvFs_LyLeMUw&s">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+    </div>
+  </div>
+</section>
+
+<div class="backtotop">
+  <a class="backto-top" href="{%url 'grocery'%}"  style="text-decoration: none; background-color: white; color: black;">Back To Top</a>
+</div>
+
+<div class="footer">
+  <div class="foot1"><h3>Get to Know Us</h3>
+  
+  <a href="" class="foot">About G Store</a>
+  <a href="" class="foot">Careers</a>
+  <a href="" class="foot">Press Releases</a>
+  </div>
+  <div class="foot1"><h3>Connect with Us</h3>
+  <a href="" class="foot">Facebook</a>
+  <a href="" class="foot">Twitter</a>
+  <a href="" class="foot">Instagram</a>
+  </div>
+  <div class="foot1"><h3>
+  Make Money with Us</h3>
+  <a href="" class="foot">Sell on G Stores</a>
+  <a href="" class="foot">Sell under G Accelerator</a>
+  <a href="" class="foot">Supply to G  Stores</a>
+  <a href="" class="foot">Become an Affiliate</a>
+  </div>
+  <div class="foot1"><h3>Let Us Help You</h3>
+  <a href="" class="foot">Your Account</a>
+  <a href="" class="foot">Returns Centre</a>
+  <a href="" class="foot">Recalls and Product Safety Alerts</a>
+  <a href="" class="foot">Help</a>
+  </div>
+</div>
+
+
+<footer class="foo">
+<div class="foo-">
+  GG
+  <span class="icp-nav-flag icp-nav-flag-in icp-nav-flag-lop" role="img" aria-label="India"></span>
+      <div class="lang">Eng</div>
+      <button class="nav-flyout-button nav-icon nav-arrow" aria-label="Expand to Change Language or Country" tabindex="0" style="visibility: visible;" aria-expanded="false"></button>
+      </div>
+</div>
+</footer>
+<div class="column-items">
+  <span>Conditions of Use & Sale</span>
+<span>Privacy Notice</span>
+<span>Interest-Based Ads</span>
+<span>G STORES.com</span>
+</div>
+
+</body>
+<script src="/static/js/grocery.js"></script>
+<script src="/static/js/a.js"></script>
+</html>

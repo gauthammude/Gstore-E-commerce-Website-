@@ -1,0 +1,130 @@
+{%include 'header.html'%}
+
+  <div class="slider">
+    <div class="slides" id="slides">
+      <div class="slide"><img src="/static/css/img1.jpg" alt="Slide 1"></div>
+      <div class="slide"><img src="/static/css/img2.webp" alt="Slide 2"></div>
+      <div class="slide"><img src="/static/css/img3.jpg" alt="Slide 3"></div>
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">❮</button>
+    <button class="next" onclick="moveSlide(1)">❯</button>
+  </div>
+
+  <div class="main">
+    <div class="container">
+      <h2 class="discount-label">40% OFF</h2>
+      <div class="box1"><img src="/static/css/img1.jpg" alt="Product 1" /></div>
+      <div class="box1"><img src="/static/css/img1.jpg" alt="Product 2" /></div>
+      <div class="box1"><img src="/static/css/img1.jpg" alt="Product 3" /></div>
+      <div class="box1"><img src="/static/css/img1.jpg" alt="Product 4" /></div>
+      <div class="product-info">
+        <h3>Premium Running Shoes</h3>
+        <p>Durable, stylish, and built for comfort during every run.</p>
+        <div class="price">$89.99</div>
+        <button class="add-to-cart buy-btn" data-name="Comfortable and lightweight sneakers for everyday wear" data-price="$$79.99" data-image="/static/css/img1.jpg">Add to Cart</button>
+              <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="Dress">
+    <input type="hidden" name="price" value="89.99">
+    <input type="hidden" name="image" value="img1.jpg">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2 class="discount-label">40% OFF</h2>
+      <div class="box1"><img src="/static/css/img1.jpg" alt="Product 1" /></div>
+      <div class="box1"><img src="/static/css/img1.jpg" alt="Product 2" /></div>
+      <div class="box1"><img src="/static/css/img1.jpg" alt="Product 3" /></div>
+      <div class="box1"><img src="/static/css/img1.jpg" alt="Product 4" /></div>
+      <div class="product-info">
+        <h3>Stylish Casual Sneakers</h3>
+        <p>Comfortable and lightweight sneakers for everyday wear.</p>
+        <div class="price">$79.99</div>
+        <button class="add-to-cart buy-btn" data-name="Comfortable and lightweight sneakers for everyday wear" data-price="$$79.99" data-image="img1.jpg">Add to Cart</button>
+              <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="Dress">
+    <input type="hidden" name="price" value="79.99">
+    <input type="hidden" name="image" value="img1.jpg">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2 class="discount-label">40% OFF</h2>
+      <div class="box1"><img src="/static/css/img1.jpg" alt="Product 1" /></div>
+      <div class="box1"><img src="/static/css/img1.jpg" alt="Product 2" /></div>
+      <div class="box1"><img src="/static/css/img1.jpg" alt="Product 3" /></div>
+      <div class="box1"><img src="/static/css/img1.jpg" alt="Product 4" /></div>
+      <div class="product-info">
+        <h3>All-Terrain Trainers</h3>
+        <p>Made for tough trails and outdoor adventures.</p>
+        <div class="price">$99.99</div>
+        <button class="add-to-cart buy-btn" data-name="Comfortable and lightweight sneakers for everyday wear" data-price="$$79.99" data-image="img1.jpg">Add to Cart</button>
+              <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="product_name" value="Dress">
+    <input type="hidden" name="price" value="99.99">
+    <input type="hidden" name="image" value="img1.jpg">
+    <button type="submit" class="buynow">Buy Now</button>
+</form>
+      </div>
+    </div>
+  </div>
+
+ <div class="backtotop">
+  <a class="backto-top" href="{%url 'fashion'%}"  style="text-decoration: none; background-color: white; color: black;">Back To Top</a>
+</div>
+
+
+<div class="footer">
+  <div class="foot1"><h3>Get to Know Us</h3>
+  
+  <a href="" class="foot">About G Store</a>
+  <a href="" class="foot">Careers</a>
+  <a href="" class="foot">Press Releases</a>
+  </div>
+  <div class="foot1"><h3>Connect with Us</h3>
+  <a href="" class="foot">Facebook</a>
+  <a href="" class="foot">Twitter</a>
+  <a href="" class="foot">Instagram</a>
+  </div>
+  <div class="foot1"><h3>
+  Make Money with Us</h3>
+  <a href="" class="foot">Sell on G Stores</a>
+  <a href="" class="foot">Sell under G Accelerator</a>
+  <a href="" class="foot">Supply to G  Stores</a>
+  <a href="" class="foot">Become an Affiliate</a>
+  </div>
+  <div class="foot1"><h3>Let Us Help You</h3>
+  <a href="" class="foot">Your Account</a>
+  <a href="" class="foot">Returns Centre</a>
+  <a href="" class="foot">Recalls and Product Safety Alerts</a>
+  <a href="" class="foot">Help</a>
+  </div>
+</div>
+
+
+<footer class="foo">
+<div class="foo-">
+  GG
+  <span class="icp-nav-flag icp-nav-flag-in icp-nav-flag-lop" role="img" aria-label="India"></span>
+      <div class="lang">Eng</div>
+      <button class="nav-flyout-button nav-icon nav-arrow" aria-label="Expand to Change Language or Country" tabindex="0" style="visibility: visible;" aria-expanded="false"></button>
+      </div>
+</div>
+</footer>
+<div class="column-items">
+  <span>Conditions of Use & Sale</span>
+<span>Privacy Notice</span>
+<span>Interest-Based Ads</span>
+<span>G STORES.com</span>
+</div>
+
+</body>
+<script src="/static/js/fashion.js"></script>
+<script src="/static/js/a.js"></script>
+</html>

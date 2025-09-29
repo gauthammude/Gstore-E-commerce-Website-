@@ -1,19 +1,16 @@
-from django.urls import path
+from django.contrib import admin
+from django.urls import path, include
 from . import views
-
 urlpatterns = [
-    path('index', views.index_view, name='index'),
-    path('fresh', views.fresh, name='fresh'),
-    path('today', views.today, name='today'),
-    path('offers', views.offers, name='offers'),
-    path('food', views.food, name='food'),
-    path('grocery', views.grocery, name='grocery'),
-    path('electronics', views.electronics, name='electronics'),
-    path('fashion', views.fashion, name='fashion'),
-    path('medicens', views.medicens, name='medicens'),
-    path('books', views.books, name='books'),
-
+    path('admin/', admin.site.urls),
+    path('cart/', views.cart, name='cart'),
+    path('', views.register_view, name='register'),
+    path('signin/', views.signin_view, name='signin'),
+    path('help/', views.help, name='help'),
+    path('accounts/', include('accounts.urls')),
+   path('payment/', views.payment_view, name='payment'),
+    path('payment/success/', views.payment_success, name='payment_success'),
+    path('payment/failed/', views.payment_failed, name='payment_failed'),
     
-
     
 ]

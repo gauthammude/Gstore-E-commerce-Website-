@@ -1,0 +1,172 @@
+{%include 'header.html'%}
+    <section class="book-section">
+  <h2 class="section-title">Top Books</h2>
+
+  <div class="book-grid">
+    <div class="book-card">
+      <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1483412266i/865.jpg" alt="Book 1">
+      <div class="book-info">
+        <h3>The Alchemist</h3>
+        <p>By Paulo Coelho</p>
+        <span class="price">$14.99</span>
+        <button class="add-to-cart buy-btn" data-name="he Alchemist" data-price="$14.99" data-image="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1483412266i/865.jpg">Add to Cart</button>
+        
+        <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="The Alchemist" value="Book">
+    <input type="hidden" name="price" value="14">
+    <input type="hidden" name="image" value="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1483412266i/865.jpg">
+    <button type="submit" class="buynow ">Buy Now</button>
+</form>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoKKGOI3E7-z4JNvqotakK4KlYsyUDiMl47A&s" alt="Book 2">
+      <div class="book-info">
+        <h3>Atomic Habits</h3>
+        <p>By James Clear</p>
+        <span class="price">$17.50</span>
+        <button class="add-to-cart buy-btn" data-name="Atomic Habits" data-price="$17.50" data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoKKGOI3E7-z4JNvqotakK4KlYsyUDiMl47A&s">Add to Cart</button>
+        
+        <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="Atomic Habits" value="Book">
+    <input type="hidden" name="price" value="17.50">
+    <input type="hidden" name="image" value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoKKGOI3E7-z4JNvqotakK4KlYsyUDiMl47A&s">
+    <button type="submit" class="buynow t">Buy Now</button>
+</form>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <img src="https://www.bookishadda.com/cdn/shop/files/240_1f619642-5185-4dc5-8489-4c4bcb27c876.png?v=1701691051&width=1946" alt="Book 3">
+      <div class="book-info">
+        <h3>Rich Dad Poor Dad</h3>
+        <p>By Robert Kiyosaki</p>
+        <span class="price">$12.00</span>
+        <button class="add-to-cart buy-btn" data-name="Rich Dad Poor Dad" data-price="$12.00" data-image="https://www.bookishadda.com/cdn/shop/files/240_1f619642-5185-4dc5-8489-4c4bcb27c876.png?v=1701691051&width=1946">Add to Cart</button>
+        
+        <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="Rich Dad Poor Dad" value="Book">
+    <input type="hidden" name="price" value="12">
+    <input type="hidden" name="image" value="https://www.bookishadda.com/cdn/shop/files/240_1f619642-5185-4dc5-8489-4c4bcb27c876.png?v=1701691051&width=1946">
+    <button type="submit" class="buynow ">Buy Now</button>
+</form>
+      </div>
+    </div>
+  </div>
+</section>
+  <section class="book-section">
+  <h2 class="section-title">Top Books</h2>
+
+  <div class="book-grid">
+    <div class="book-card">
+      <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1483412266i/865.jpg" alt="Book 1">
+      <div class="book-info">
+        <h3>The Alchemist</h3>
+        <p>By Paulo Coelho</p>
+        <span class="price">$14.99</span>
+        <button class="add-to-cart buy-btn" data-name="he Alchemist" data-price="$14.99" data-image="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1483412266i/865.jpg">Add to Cart</button>
+        
+         <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="The Alchemist" value="Book">
+    <input type="hidden" name="price" value="14">
+    <input type="hidden" name="image" value="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1483412266i/865.jpg">
+    <button type="submit" class="buynow ">Buy Now</button>
+</form>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoKKGOI3E7-z4JNvqotakK4KlYsyUDiMl47A&s" alt="Book 2">
+      <div class="book-info">
+        <h3>Atomic Habits</h3>
+        <p>By James Clear</p>
+        <span class="price">$17.50</span>
+        <button class="add-to-cart buy-btn" data-name="Atomic Habits" data-price="$17.50" data-image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoKKGOI3E7-z4JNvqotakK4KlYsyUDiMl47A&s">Add to Cart</button>
+        
+        <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="Atomic Habits" value="Book">
+    <input type="hidden" name="price" value="17.50">
+    <input type="hidden" name="image" value="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoKKGOI3E7-z4JNvqotakK4KlYsyUDiMl47A&s">
+    <button type="submit" class="buynow ">Buy Now</button>
+</form>
+      </div>
+    </div>
+
+    <div class="book-card">
+      <img src="https://www.bookishadda.com/cdn/shop/files/240_1f619642-5185-4dc5-8489-4c4bcb27c876.png?v=1701691051&width=1946" alt="Book 3">
+      <div class="book-info">
+        <h3>Rich Dad Poor Dad</h3>
+        <p>By Robert Kiyosaki</p>
+        <span class="price">$12.00</span>
+        <button class="add-to-cart buy-btn" data-name="Rich Dad Poor Dad" data-price="$12.00" data-image="https://www.bookishadda.com/cdn/shop/files/240_1f619642-5185-4dc5-8489-4c4bcb27c876.png?v=1701691051&width=1946">Add to Cart</button>
+        
+    <form method="post" action="{% url 'payment' %}">
+    {% csrf_token %}
+    <input type="hidden" name="Rich Dad Poor Dad" value="Book">
+    <input type="hidden" name="price" value="12">
+    <input type="hidden" name="image" value="https://www.bookishadda.com/cdn/shop/files/240_1f619642-5185-4dc5-8489-4c4bcb27c876.png?v=1701691051&width=1946">
+    <button type="submit" class="buynow ">Buy Now</button>
+</form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="backtotop">
+  <a class="backto-top" href="{%url 'books'%}"  style="text-decoration: none; background-color: white; color: black;">Back To Top</a>
+</div>
+
+<div class="footer">
+  <div class="foot1"><h3>Get to Know Us</h3>
+  
+  <a href="" class="foot">About G Store</a>
+  <a href="" class="foot">Careers</a>
+  <a href="" class="foot">Press Releases</a>
+  </div>
+  <div class="foot1"><h3>Connect with Us</h3>
+  <a href="" class="foot">Facebook</a>
+  <a href="" class="foot">Twitter</a>
+  <a href="" class="foot">Instagram</a>
+  </div>
+  <div class="foot1"><h3>
+  Make Money with Us</h3>
+  <a href="" class="foot">Sell on G Stores</a>
+  <a href="" class="foot">Sell under G Accelerator</a>
+  <a href="" class="foot">Supply to G  Stores</a>
+  <a href="" class="foot">Become an Affiliate</a>
+  </div>
+  <div class="foot1"><h3>Let Us Help You</h3>
+  <a href="" class="foot">Your Account</a>
+  <a href="" class="foot">Returns Centre</a>
+  <a href="" class="foot">Recalls and Product Safety Alerts</a>
+  <a href="" class="foot">Help</a>
+  </div>
+</div>
+
+
+<footer class="foo">
+<div class="foo-">
+  GG
+  <span class="icp-nav-flag icp-nav-flag-in icp-nav-flag-lop" role="img" aria-label="India"></span>
+      <div class="lang">Eng</div>
+      <button class="nav-flyout-button nav-icon nav-arrow" aria-label="Expand to Change Language or Country" tabindex="0" style="visibility: visible;" aria-expanded="false"></button>
+      </div>
+</div>
+</footer>
+<div class="column-items">
+  <span>Conditions of Use & Sale</span>
+<span>Privacy Notice</span>
+<span>Interest-Based Ads</span>
+<span>G STORES.com</span>
+</div>
+
+</body>
+<script src="/static/js/books.js"></script>
+<script src="/static/js/a.js"></script>
+</html>

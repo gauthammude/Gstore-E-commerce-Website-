@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>G Store</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/fresh.css">
+  
+  <div id="top">
+
+    <div class="hamburger-container">
+      <i class="fas fa-bars" id="hamburger-icon"></i>
+      <div class="hamburger-menu" id="hamburger-menu">
+        <a href="{%url 'signin'%}">Sign In</a>
+        <a href="{%url 'cart'%}">Your Account</a>
+        <a href="{%url 'cart'%}">Orders</a>
+        <a href="{%url 'help'%}">Help</a>
+      </div>
+    </div>
+    <img id="img" src="/static/css/logo.png" alt="logo" />
+
+    <div class="loc">
+      Location <i class="fas fa-map-marker-alt"></i>
+    </div>
+    <h1><center>G STORE</center></h1>
+    <div class="search">
+      <div class="all">
+        All <i class="fas fa-caret-down"></i>
+      </div>
+      <input id="search" type="search" placeholder="Search..." />
+      <div class="glass"><i class="fas fa-search" style="font-size: 24px;"></i>
+    </div>
+    </div>
+      <div class="Language">
+      <span class="icp-nav-flag icp-nav-flag-in icp-nav-flag-lop" role="img" aria-label="India"></span>
+      <div class="lang">Eng</div>
+      <button class="nav-flyout-button nav-icon nav-arrow" aria-label="Expand to Change Language or Country" tabindex="0" style="visibility: visible;" aria-expanded="false"></button>
+      </div>
+
+      <a href="{%url 'signin'%}" class="login">Login</a>
+      <div class="login">
+      <a href="{%url 'cart'%}" class="cart" style="color: whitesmoke; text-decoration: none;">Return</a>&
+      <a href="{%url 'cart'%}" class="cart" style="color: whitesmoke; text-decoration: none;">Orders</a>
+      </div>
+      <a href="{%url 'cart'%}" class="cart" style="color: whitesmoke; text-decoration: none;">
+  <i class="fas fa-shopping-cart cart-symbol"></i>
+  Cart
+</a>
+  
+  </div>
+</head>
+
+
+<body>
+
+  <div class="bar">
+    <a href="{%url 'index'%}" class="options">Home</a>
+    <a href="{%url 'fresh'%}" class="options">Fresh</a>
+    <a href="{%url 'today'%}" class="options">Today's deal</a>
+    <a href="{%url 'grocery'%}" class="options">Grocery</a>
+    <a href="{%url 'offers'%}" class="options">Offers</a>
+    <a href="{%url 'electronics'%}"class="options">Electronic</a>
+    <a href="{%url 'fashion'%}"class="options">Fashion</a>
+    <a href="{%url 'food'%}"class="options">Food</a>
+    <a href="{%url 'books'%}" class="options">Books</a>
+    <a href="{%url 'medicens'%}" class="options">Medicens</a>
+  </div>
+
+
+
+
+<h1>Your Cart</h1>
+
+<div id="cart-items"></div>
+
+
+ <div class="backtotop">
+  <a class="backto-top" href="{%url 'cart'%}"  style="text-decoration: none; background-color: white; color: black;">Back To Top</a>
+</div>
+
+
+<div class="footer">
+  <div class="foot1"><h3>Get to Know Us</h3>
+  
+  <a href="" class="foot">About G Store</a>
+  <a href="" class="foot">Careers</a>
+  <a href="" class="foot">Press Releases</a>
+  </div>
+  <div class="foot1"><h3>Connect with Us</h3>
+  <a href="" class="foot">Facebook</a>
+  <a href="" class="foot">Twitter</a>
+  <a href="" class="foot">Instagram</a>
+  </div>
+  <div class="foot1"><h3>
+  Make Money with Us</h3>
+  <a href="" class="foot">Sell on G Stores</a>
+  <a href="" class="foot">Sell under G Accelerator</a>
+  <a href="" class="foot">Supply to G  Stores</a>
+  <a href="" class="foot">Become an Affiliate</a>
+  </div>
+  <div class="foot1"><h3>Let Us Help You</h3>
+  <a href="" class="foot">Your Account</a>
+  <a href="" class="foot">Returns Centre</a>
+  <a href="" class="foot">Recalls and Product Safety Alerts</a>
+  <a href="" class="foot">Help</a>
+  </div>
+</div>
+
+
+<footer class="foo">
+<div class="foo-">
+  GG
+  <span class="icp-nav-flag icp-nav-flag-in icp-nav-flag-lop" role="img" aria-label="India"></span>
+      <div class="lang">Eng</div>
+      <button class="nav-flyout-button nav-icon nav-arrow" aria-label="Expand to Change Language or Country" tabindex="0" style="visibility: visible;" aria-expanded="false"></button>
+      </div>
+</div>
+</footer>
+<div class="column">
+  <a class="column-items">Conditions of Use & Sale</a>
+  <a class="column-items">Privacy Notice</a>
+  <a class="column-items">Interest-Based Ads</a>
+  <a class="column-items">G STORES.com</a>
+</div>
+
+
+</body>
+<script src="/static/js/cart.js"></script>
+</html>
